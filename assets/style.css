@@ -38,8 +38,16 @@ body {
   line-height: 60px;
 }
 
+.navbar .button.disabled {
+    opacity: 0.3;
+}
+
 .navbar .button:hover {
   background-color: #3571b9;
+}
+
+.navbar .button.disabled:hover {
+  background-color: #3a84df;
 }
 
 .logo {
@@ -71,6 +79,11 @@ body {
   font-size: 40px;
   line-height: 200px;
   background-color: rgba(58, 132, 223, 0.8);
+}
+
+.content .button.small {
+    height: 130px;
+    line-height: 130px;
 }
 
 .content .button:hover {
