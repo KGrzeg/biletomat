@@ -1,23 +1,43 @@
 <div class="content">
-  <div x-text="t('paymentHeader')"></div>
-  <div>
-    <div>
+  <h2 x-text="t('paymentHeader')" style="margin-top: 45px; margin-bottom: 0px;"></h2>
+  <div class="horizontalFlex images">
+    <div onclick="router.redirect('podziekowanie.html')">
       <h2 x-text="t('paymentMethodCard')"></h2>
       <img src="/assets/credit-cards.png" />
     </div>
-    <div>
-      <h2 x-text="t('paymentMethodOr')"></h2>
-    </div>
-    <div>
+    <h2 x-text="t('paymentMethodOr')"></h2>
+    <div onclick="router.redirect('podziekowanie.html')">
       <h2 x-text="t('paymentMethodMoney')"></h2>
       <img src="/assets/cash-flow.png" />
     </div>
   </div>
 
-  <div>
+  <div class="horizontalFlex summaryFlex">
     <div>
+      <p x-text="t('summary')" style="margin-top: 0"></p>
+      <p class="sum">
+        <span x-text="t('sum')">KWOTA:</span>
+        <span id="sum">2137.69zł</span>
+      </p>
     </div>
-    <div></div>
-    <div></div>
+    <div>
+      <pre id="summary" class="summary">
+1x bilet ulgowy 21.37zł
+3x bilet dużej rodziny 21.37zł
+2x bilet ulgowy 21.37zł
+1x bilet ulgowy 21.37zł
+3x bilet dużej rodziny 21.37zł
+2x bilet ulgowy 21.37zł
+1x bilet ulgowy 21.37zł
+3x bilet dużej rodziny 21.37zł
+2x bilet ulgowy 21.37zł
+1x bilet ulgowy 21.37zł
+3x bilet dużej rodziny 21.37zł
+2x bilet ulgowy 21.37zł
+      </pre>
+    </div>
+    <div>
+
+    </div>
   </div>
 </div>

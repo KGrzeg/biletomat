@@ -6,7 +6,8 @@ const router = {
     "strona_glowna.html",
   ],
   showCancelBtnOnHrefs: [
-  
+    "bilet_miejski.html",
+    "bilet_metropolitalny.html",
   ],
   redirect(href) {
     const url = parts + "/" + href;
@@ -44,6 +45,22 @@ const router = {
       }
       case "karta_miejska.html": {
         router.redirect("strona_glowna.html");
+        break;
+      }
+      case "platnosc.html": {
+        router.redirect("karta_miejska.html");
+        break;
+      }
+      case "podziekowanie.html": {
+        router.redirect("strona_glowna.html");
+        break;
+      }
+      case "bilet_miejski.html": {
+        router.redirect("wybor_biletu.html");
+        break;
+      }
+      case "bilet_metropolitalny.html": {
+        router.redirect("wybor_biletu.html");
         break;
       }
     }
