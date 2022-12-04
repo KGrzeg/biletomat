@@ -1,5 +1,5 @@
 const ticketMachine = {
-  transactionType: '', // cityCard, ticket
+  // transactionType: '', // cityCard, ticket
   // ticketType: 'city', // city, metro
   prices: {
     city: {
@@ -72,14 +72,7 @@ const ticketMachine = {
     };
     ticketMachine.updateView();
   },
-  updateView() {
-    document.getElementById("counter-single-reduced").innerText = ticketMachine.tickets.single.reduced;
-    document.getElementById("counter-single-normal").innerText = ticketMachine.tickets.single.normal;
-    document.getElementById("counter-hour-reduced").innerText = ticketMachine.tickets.hour.reduced;
-    document.getElementById("counter-hour-normal").innerText = ticketMachine.tickets.hour.normal;
-    document.getElementById("counter-daily-reduced").innerText = ticketMachine.tickets.daily.reduced;
-    document.getElementById("counter-daily-normal").innerText = ticketMachine.tickets.daily.normal;
-
+  getSummaryInfo() {
     const ticketType = router.payload.ticketType;
     let summaryText = '';
     let sumPrice = 0;
@@ -99,11 +92,11 @@ const ticketMachine = {
 
         sumPrice += currentPrice;
       }
-      
+
       if (ticketMachine.tickets[period].normal > 0) {
         let currentPrice = ticketMachine.prices[ticketType][period].normal;
         currentPrice *= ticketMachine.tickets[period].normal;
-        
+
         const ticketLabel = ticketType + '-' + period + '-normal';
 
         summaryText += t(ticketLabel) + ' ';
@@ -116,8 +109,60 @@ const ticketMachine = {
         sumPrice += currentPrice;
       }
     });
-    document.getElementById("sum").innerText = sumPrice.toFixed(2) + " ZŁ";
 
-    document.getElementById("summary").innerText = summaryText;
+    return {
+      summaryText,
+      sumPrice
+    }
+  },
+  updateView() {
+    if (router?.payload?.transactionType === "cityCard") {
+      let months = router.payload.months; //1 3 12
+      let suma = 0;
+      let summaryText = '';
+
+      if (months === 1) {
+        suma = 100; //Cena biletu 
+        summaryText += t('monthCard');
+        summaryText += ' ';
+        summaryText += suma.toFixed(2)
+        summaryText += " ZŁ";
+        summaryText += "\n";
+
+      }
+      if (months === 3) {
+        suma = 250;
+        summaryText = t('3monthCard');
+        summaryText += ' ';
+        summaryText += suma.toFixed(2)
+        summaryText += " ZŁ";
+        summaryText += "\n";
+      }
+      if (months === 12) {
+        suma = 800;
+        summaryText = t('yearCard');
+        summaryText += ' ';
+        summaryText += suma.toFixed(2)
+        summaryText += " ZŁ";
+        summaryText += "\n";
+      }
+
+
+      document.getElementById("sum").innerText = suma + " ZŁ";
+      document.getElementById("summary").innerText = summaryText;
+
+    } else {
+
+      const info = ticketMachine.getSummaryInfo();
+      document.getElementById("sum").innerText = info.sumPrice.toFixed(2) + " ZŁ";
+      document.getElementById("summary").innerText = info.summaryText;
+
+      document.getElementById("counter-single-reduced").innerText = ticketMachine.tickets.single.reduced;
+      document.getElementById("counter-single-normal").innerText = ticketMachine.tickets.single.normal;
+      document.getElementById("counter-hour-reduced").innerText = ticketMachine.tickets.hour.reduced;
+      document.getElementById("counter-hour-normal").innerText = ticketMachine.tickets.hour.normal;
+      document.getElementById("counter-daily-reduced").innerText = ticketMachine.tickets.daily.reduced;
+      document.getElementById("counter-daily-normal").innerText = ticketMachine.tickets.daily.normal;
+    }
   },
 }

@@ -1,8 +1,15 @@
 <div class="content push">
-  <div class="button small" onclick="router.redirect('platnosc.html')" x-text="t('ticketMonth')">
+  <div class="button small"
+    onclick="
+      router.redirect('platnosc.html',{transactionType: 'cityCard', months: 1}).then(function(){ticketMachine.updateView()})"
+    x-text="t('ticketMonth')">
   </div>
-  <div class="button small" onclick="router.redirect('platnosc.html')" x-text="t('ticket3Month')">
+  <div class="button small"
+    onclick="router.redirect('platnosc.html', {transactionType: 'cityCard', months: 3}).then(function(){ ticketMachine.updateView() })"
+    x-text="t('ticket3Month')">
   </div>
-  <div class="button small" onclick="router.redirect('platnosc.html')" x-text="t('ticketYear')">
+  <div class="button small"
+    onclick="router.redirect('platnosc.html', {transactionType: 'cityCard', months: 12}).then(function(){ ticketMachine.updateView() })"
+    x-text="t('ticketYear')">
   </div>
 </div>
