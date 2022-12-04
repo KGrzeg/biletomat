@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="body">
+    <div class="navbar">
+        <div>
+          <img src="/assets/logo.png" class="logo" />
+        </div>
+      
+        <div class="button"
+          id="back"
+          onclick="router.back()"
+          x-text="t(backBtn)" >
+          POWRÓT
+        </div>
+        <div class="clock" id="clock">
+          00:00
+        </div>
+        <div class="button"
+          id="cancel"
+          onclick="router.cancel()"
+          x-text="t(cancelBtn)">
+          ANULUJ
+        </div>
+        <div class="info">
+          <img src="/assets/info.png" />
+          <img src="/assets/poland.png"
+            id="pl"
+            class="flag"
+            onclick="langs.changeLang('pl')"
+            style="display: none" />
+          <img src="/assets/us.png"
+            id="en"
+            class="flag" 
+            onclick="langs.changeLang('en')" />
+        </div>
+      </div> 
+      <div id="body">
+      </div>
+  </div>
+
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="assets/js/clock.js"></script>
+  <script src="assets/js/router.js"></script>
+  <script src="assets/js/langs.js"></script>
+</body>
+
+</html>
