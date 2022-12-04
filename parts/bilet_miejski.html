@@ -1,8 +1,8 @@
 <div class="content">
   <div class="grid">
-    <h2>JEDNORAZOWY</h2>
+    <h2 x-text="t('ticket-single')">JEDNORAZOWY</h2>
     <div class="selector">
-      <h3>Ulgowy</h3>
+      <h3 x-text="t('ticket-reduced')"></h3>
       <div class="buttonRow">
         <div class="button" onclick="ticketMachine.substract('single', 'reduced')">
           -
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="selector">
-      <h3>Normalny</h3>
+      <h3 x-text="t('ticket-normal')">Normalny</h3>
       <div class="buttonRow">
         <div class="button" onclick="ticketMachine.substract('single', 'normal')">
           -
@@ -29,9 +29,9 @@
         </div>
       </div>
     </div>
-    <h2>GODZINNY</h2>
+    <h2 x-text="t('ticket-hour')"></h2>
     <div class="selector">
-      <h3>Ulgowy</h3>
+      <h3 x-text="t('ticket-reduced')">Ulgowy</h3>
       <div class="buttonRow">
         <div class="button" onclick="ticketMachine.substract('hour', 'reduced')">
           -
@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="selector">
-      <h3>Normalny</h3>
+      <h3 x-text="t('ticket-normal')">Normalny</h3>
       <div class="buttonRow">
         <div class="button" onclick="ticketMachine.substract('hour', 'normal')">
           -
@@ -58,9 +58,9 @@
         </div>
       </div>
     </div>
-    <h2>DOBOWY</h2>
+    <h2 x-text="t('ticket-daily')"></h2>
     <div class="selector">
-      <h3>Ulgowy</h3>
+      <h3 x-text="t(t'icket-reduced')">Ulgowy</h3>
       <div class="buttonRow">
         <div class="button" onclick="ticketMachine.substract('daily', 'reduced')">
           -
@@ -74,7 +74,7 @@
       </div>
     </div>
     <div class="selector">
-      <h3>Normalny</h3>
+      <h3 x-text="t('ticket-normal')">Normalny</h3>
       <div class="buttonRow">
         <div class="button" onclick="ticketMachine.substract('daily', 'normal')">
           -
@@ -93,14 +93,12 @@
     <div>
       <p class="sum">
         <span x-text="t('sum')">KWOTA:</span>
-        <span id="sum">2137.69zł</span>
-      </p>
-      
+        <br />
+        <span id="sum">0 ZŁ</span>
+      </p>      
     </div>
     <div>
-      <pre id="summary" class="summary">
-
-        </pre>
+      <pre id="summary" class="summary"></pre>
     </div>
     <div class="button" onclick="router.redirect('platnosc.html')" x-text="t('proceed')"></div>
   </div>

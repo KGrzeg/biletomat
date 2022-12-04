@@ -9,13 +9,17 @@ const router = {
     "bilet_miejski.html",
     "bilet_metropolitalny.html",
   ],
-  redirect(href) {
+  payload: null,
+  redirect(href, payload = false) {
     const url = parts + "/" + href;
-    fetch(url)
+    return fetch(url)
       .then(function (response) {
         return response.text()
       })
       .then(function (text) {
+        if (payload)
+          router.payload = payload;
+
         const body = document.getElementById("body");
         body.innerHTML = text;
         router.currentHref = href;
@@ -29,44 +33,21 @@ const router = {
           document.getElementById("cancel").classList.remove('disabled');
         else
           document.getElementById("cancel").classList.add('disabled');
-
       });
   },
   back() {
-    switch (router.currentHref) {
-      case "wybor_biletu.html": {
-        router.redirect("strona_glowna.html");
-        break;
-      }
-      case "odczyt_karty.html": {
-        router.redirect("strona_glowna.html");
-        break;
-
-      }
-      case "karta_miejska.html": {
-        router.redirect("strona_glowna.html");
-        break;
-      }
-      case "platnosc.html": {
-        router.redirect("karta_miejska.html");
-        break;
-      }
-      case "podziekowanie.html": {
-        router.redirect("strona_glowna.html");
-        break;
-      }
-      case "bilet_miejski.html": {
-        router.redirect("wybor_biletu.html");
-        break;
-      }
-      case "bilet_metropolitalny.html": {
-        router.redirect("wybor_biletu.html");
-        break;
-      }
+    if (router.currentHref == "bilet_miejski.html") {
+      router.redirect("wybor_biletu.html");
+    } else {
+      router.redirect("strona_glowna.html");
     }
   },
   refresh() {
-    router.redirect(router.currentHref);
+    router
+      .redirect(router.currentHref)
+      .then(function () {
+        ticketMachine.updateView();
+      });
   }
 }
 
