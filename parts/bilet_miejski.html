@@ -1,0 +1,107 @@
+<div class="content">
+  <div class="grid">
+    <h2>JEDNORAZOWY</h2>
+    <div class="selector">
+      <h3>Ulgowy</h3>
+      <div class="buttonRow">
+        <div class="button" onclick="ticketMachine.substract('single', 'reduced')">
+          -
+        </div>
+        <div class="button" onclick="ticketMachine.add('single', 'reduced')">
+          +
+        </div>
+        <div class="button counter" id="counter-single-reduced">
+          0
+        </div>
+      </div>
+    </div>
+    <div class="selector">
+      <h3>Normalny</h3>
+      <div class="buttonRow">
+        <div class="button" onclick="ticketMachine.substract('single', 'normal')">
+          -
+        </div>
+        <div class="button" onclick="ticketMachine.add('single', 'normal')">
+          +
+        </div>
+        <div class="button counter" id="counter-single-normal">
+          0
+        </div>
+      </div>
+    </div>
+    <h2>GODZINNY</h2>
+    <div class="selector">
+      <h3>Ulgowy</h3>
+      <div class="buttonRow">
+        <div class="button" onclick="ticketMachine.substract('hour', 'reduced')">
+          -
+        </div>
+        <div class="button" onclick="ticketMachine.add('hour', 'reduced')">
+          +
+        </div>
+        <div class="button counter" id="counter-hour-reduced">
+          0
+        </div>
+      </div>
+    </div>
+    <div class="selector">
+      <h3>Normalny</h3>
+      <div class="buttonRow">
+        <div class="button" onclick="ticketMachine.substract('hour', 'normal')">
+          -
+        </div>
+        <div class="button" onclick="ticketMachine.add('hour', 'normal')">
+          +
+        </div>
+        <div class="button counter" id="counter-hour-normal">
+          0
+        </div>
+      </div>
+    </div>
+    <h2>DOBOWY</h2>
+    <div class="selector">
+      <h3>Ulgowy</h3>
+      <div class="buttonRow">
+        <div class="button" onclick="ticketMachine.substract('daily', 'reduced')">
+          -
+        </div>
+        <div class="button" onclick="ticketMachine.add('daily', 'reduced')">
+          +
+        </div>
+        <div class="button counter" id="counter-daily-reduced">
+          0
+        </div>
+      </div>
+    </div>
+    <div class="selector">
+      <h3>Normalny</h3>
+      <div class="buttonRow">
+        <div class="button" onclick="ticketMachine.substract('daily', 'normal')">
+          -
+        </div>
+        <div class="button" onclick="ticketMachine.add('daily', 'normal')">
+          +
+        </div>
+        <div class="button counter" id="counter-daily-normal">
+          0
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="horizontalFlex summaryFlex">
+    <div>
+      <p class="sum">
+        <span x-text="t('sum')">KWOTA:</span>
+        <span id="sum">2137.69zł</span>
+      </p>
+      
+    </div>
+    <div>
+      <pre id="summary" class="summary">
+
+        </pre>
+    </div>
+    <div class="button" onclick="router.redirect('platnosc.html')" x-text="t('proceed')"></div>
+  </div>
+</div>

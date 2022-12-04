@@ -95,8 +95,9 @@ body {
 
 .horizontalFlex.summaryFlex {
   margin-top: 30px;
-  font-size: 200%;
+  font-size: 180%;
   font-weight: bold;
+  gap: 30px;
 }
 
 .horizontalFlex.summaryFlex > *:nth-child(1) {
@@ -119,7 +120,8 @@ body {
   width: 100%;
   height: 200px;
   overflow: auto;
-  margin: 0 30px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 5px;
 }
 
@@ -145,8 +147,8 @@ body {
 }
 
 .content .button.small {
-    height: 130px;
-    line-height: 130px;
+  height: 130px;
+  line-height: 130px;
 }
 
 .content .button:hover {
@@ -155,4 +157,46 @@ body {
 
 h1 {
   font-size: 55px;
+}
+
+.horizontalFlex .button{
+  font-size: 30px;
+  line-height: 100px;
+  margin-top: 0;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+.buttonRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.selector .button{
+  width: 120px;
+  height: 74px;
+  line-height: 66px;
+  font-size: 30px;
+  margin: 0 20px;
+}
+.grid h3{
+  text-align: center;
+}
+.grid h2 {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.content .counter,
+.content .counter:hover {
+  /* background-color: #222 !important; nie wolno używać important! */
+  background-color: #222;
+  width: 150px;
 }

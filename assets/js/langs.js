@@ -18,6 +18,7 @@ const langs = {
     thanks: "DZIĘKUJEMY ZA KORZYSTANIE Z USŁUG ZKM GDYNIA",
     wait: "PROSZĘ CZEKAĆ",
     sum: "KWOTA:",
+    proceed: "PRZEJDŹ DO PŁATNOŚCI",
   },
   ukr: {
     ticketCity: "МІСЬКИЙ КВИТОК",
@@ -38,6 +39,7 @@ const langs = {
     thanks: "ДЯКУЮ ЗА КОРИСТУВАННЯ ПОСЛУГАМИ ZKM GDYNIA",
     wait: "БУДЬ ЛАСКА, ЗАЧЕКАЙТЕ",
     sum: "СУМА:",
+    proceed: "PRZEJDŹ DO PŁATNOŚCI",
   },
   en: {
     ticketCity: "CITY TICKET",
@@ -58,6 +60,7 @@ const langs = {
     thanks: "THANK YOU FOR USING ZKM GDYNIA TRANSPORT",
     wait: "PLEASE WAIT",
     sum: "PRICE:",
+    proceed: "PROCEED TO PAYMENT",
   },
   currentlang: 'pl',
   changeLang(newLang) {

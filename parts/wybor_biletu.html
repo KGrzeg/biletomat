@@ -1,11 +1,11 @@
 <div class="content push">
   <div class="button"
-    onclick="router.redirect('bilet_miejski.html')"
+    onclick="router.redirect('bilet_miejski.html') || ticketMachine.cancel()"
     x-text="t('ticketCity')">
     BILET MIEJSKI
   </div>
   <div class="button"
-    onclick="router.redirect('bilet_metropolitalny.html')"
+    onclick="router.redirect('bilet_metropolitalny.html') || ticketMachine.cancel()"
     x-text="t('ticketMetro')">
     BILET METROPOLITALNY 
   </div>

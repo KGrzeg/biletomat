@@ -27,7 +27,7 @@
         </div>
         <div class="button disabled"
           id="cancel"
-          onclick="router.cancel()"
+          onclick="ticketMachine.cancel()"
           x-text="t(cancelBtn)">
           ANULUJ
         </div>
@@ -40,11 +40,11 @@
             style="display: none" />
           <img src="/assets/us.png"
             id="en"
-            class="flag" 
+            class="flag"
             onclick="langs.changeLang('en')" />
           <img src="/assets/ukraine.png"
             id="ukr"
-            class="flag" 
+            class="flag"
             onclick="langs.changeLang('ukr')" />
         </div>
       </div> 
@@ -56,6 +56,7 @@
   <script src="assets/js/clock.js"></script>
   <script src="assets/js/router.js"></script>
   <script src="assets/js/langs.js"></script>
+  <script src="assets/js/ticketMachine.js"></script>
 </body>
 
 </html>
