@@ -1,12 +1,12 @@
 <div class="content">
   <h2 x-text="t('paymentHeader')" style="margin-top: 45px; margin-bottom: 0px;"></h2>
   <div class="horizontalFlex images">
-    <div onclick="router.redirect('podziekowanie.html')">
+    <div onclick="router.redirect('podziekowanie.html').then(function(){thanks()})">
       <h2 x-text="t('paymentMethodCard')"></h2>
       <img src="/assets/credit-cards.png" />
     </div>
     <h2 x-text="t('paymentMethodOr')"></h2>
-    <div onclick="router.redirect('podziekowanie.html')">
+    <div onclick="router.redirect('podziekowanie.html').then(function(){thanks()})">
       <h2 x-text="t('paymentMethodMoney')"></h2>
       <img src="/assets/cash-flow.png" />
     </div>
@@ -15,8 +15,8 @@
   <div class="horizontalFlex summaryFlex">
     <div>
       <p class="sum">
-        <span x-text="t('sum')">KWOTA:</span> <br/>
-        <span id="sum" ></span> 
+        <span x-text="t('sum')">KWOTA:</span> <br />
+        <span id="sum"></span>
       </p>
     </div>
     <div>

@@ -38,8 +38,11 @@ const langs = {
     'ticket-normal' : "NORMALNY",
     'monthCard' : "Doładowanie miesięczne karty miejskiej",
     '3monthCard': "Doładowanie 3-miesięczne karty miejskiej",
-    'yearCard' : "Doładowanie roczne karty miejskiej"
-
+    'yearCard' : "Doładowanie roczne karty miejskiej",
+    'thanks-1': "OCZEKIWANIE NA PŁATNOŚĆ",
+    'thanks-2': "PRZETWARZANIE",
+    'thanks-3': "POTWIERDZENIE PŁATNOŚCI",
+    'thanks-4': "TRANSAKCJA ZAKOŃCZONA"
   },
   en: {
     ticketCity: "CITY TICKET",
@@ -78,9 +81,13 @@ const langs = {
     'ticket-daily': "24-HOUR",
     'ticket-reduced': "REDUCED",
     'ticket-normal' : "NORMAL",
-    monthCard: 'A month recharge of the card',
+    'monthCard': 'A month recharge of the card',
     '3monthCard': '3 months recharge of the card',
-    yearCard: 'Year recharge of the card',
+    'yearCard': 'Year recharge of the card',
+    'thanks-1': "WAITING FOR PAYMENT",
+    'thanks-2': "PROCESSING",
+    'thanks-3': "PAYMENT ACCEPTED",
+    'thanks-4': "TRANSACTION SUCCESSFULL"
   },
   ukr: {
     ticketCity: "МІСЬКИЙ КВИТОК",
