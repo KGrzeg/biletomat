@@ -12,44 +12,64 @@
 <body>
   <div class="body">
     <div class="navbar">
-        <div>
-          <img src="/assets/logo.png" class="logo" />
-        </div>
-      
-        <div class="button disabled"
-          id="back"
-          onclick="router.back()"
-          x-text="t(backBtn)" >
-          POWRÓT
-        </div>
-        <div class="clock" id="clock">
-          00:00
-        </div>
-        <div class="button disabled"
-          id="cancel"
-          onclick="ticketMachine.cancel()"
-          x-text="t(cancelBtn)">
-          ANULUJ
-        </div>
-        <div class="info">
-          <img src="/assets/info.png" />
-          <img src="/assets/poland.png"
-            id="pl"
-            class="flag"
-            onclick="langs.changeLang('pl')"
-            style="display: none" />
-          <img src="/assets/us.png"
-            id="en"
-            class="flag"
-            onclick="langs.changeLang('en')" />
-          <img src="/assets/ukraine.png"
-            id="ukr"
-            class="flag"
-            onclick="langs.changeLang('ukr')" />
-        </div>
-      </div> 
-      <div id="body">
+      <div>
+        <img src="/assets/logo.png" class="logo" />
       </div>
+
+      <div class="button disabled" id="back" onclick="router.back()" x-text="t(backBtn)">
+        POWRÓT
+      </div>
+      <div class="clock" id="clock">
+        00:00
+      </div>
+      <div class="button disabled" id="cancel" onclick="ticketMachine.cancel()" x-text="t(cancelBtn)">
+        ANULUJ
+      </div>
+      <div class="info">
+        <img src="/assets/info.png" />
+        <img src="/assets/poland.png" id="pl" class="flag" onclick="langs.changeLang('pl')" style="display: none" />
+        <img src="/assets/us.png" id="en" class="flag" onclick="langs.changeLang('en')" />
+        <img src="/assets/ukraine.png" id="ukr" class="flag" onclick="langs.changeLang('ukr')" />
+      </div>
+    </div>
+    <div id="body">
+    </div>
+    <div id="modal-wrapper">
+      <div class="backdrop"></div>
+      <div class="modal">
+        <div class="modal-bar">
+          <div class="button">ZAMKNIJ</div>
+        </div>
+        <div class="modal-body">
+          <div class="dbl-column">
+            <div class="col">
+              <h1>NORMALNY</h1>
+              <div class="button">ZAMKNIJ</div>
+              <div class="button">ZAMKNIJ</div>
+              <div class="button">ZAMKNIJ</div>
+              <div class="button">ZAMKNIJ</div>
+            </div>
+            <div class="col">
+              <h1>ULGOWY</h1>
+              <div class="button">ZAMKNIJ</div>
+              <div class="button">ZAMKNIJ</div>
+              <div class="button">ZAMKNIJ</div>
+              <div class="button">ZAMKNIJ</div>
+            </div>
+          </div>
+
+          <!-- <div class="single-column">
+            <div>
+
+            </div>
+          </div> -->
+
+
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
   <script src="//unpkg.com/alpinejs" defer></script>
@@ -58,6 +78,7 @@
   <script src="assets/js/langs.js"></script>
   <script src="assets/js/ticketMachine.js"></script>
   <script src="assets/js/thanks.js"></script>
+  <script src="assets/js/modal.js"></script>
 </body>
 
 </html>
