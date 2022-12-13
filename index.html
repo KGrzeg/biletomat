@@ -34,42 +34,36 @@
     </div>
     <div id="body">
     </div>
-    <div id="modal-wrapper">
+    <div id="modal-wrapper" style="display:none">
       <div class="backdrop"></div>
       <div class="modal">
         <div class="modal-bar">
-          <div class="button">ZAMKNIJ</div>
+          <div class="button" onclick="modal.close()">ZAMKNIJ</div>
         </div>
         <div class="modal-body">
-          <div class="dbl-column">
-            <div class="col">
+          <div class="dbl-column" id="modalview-dbl-column">
+            <div>
               <h1>NORMALNY</h1>
-              <div class="button">ZAMKNIJ</div>
-              <div class="button">ZAMKNIJ</div>
-              <div class="button">ZAMKNIJ</div>
-              <div class="button">ZAMKNIJ</div>
+              <div id="buttons-column-1">
+                <div class="button">ZAMKNIJ</div>
+              </div>
             </div>
-            <div class="col">
+            <div>
               <h1>ULGOWY</h1>
-              <div class="button">ZAMKNIJ</div>
-              <div class="button">ZAMKNIJ</div>
-              <div class="button">ZAMKNIJ</div>
-              <div class="button">ZAMKNIJ</div>
+              <div id="buttons-column-2">
+                <div class="button">ZAMKNIJ</div>
+              </div>
             </div>
           </div>
 
-          <!-- <div class="single-column">
-            <div>
-
+          <div class="single-column" id="modalview-single-column">
+            <div id="buttons-single">
+              <div class="button">ZAMKNIJ</div>
             </div>
-          </div> -->
-
-
+          </div>
         </div>
       </div>
     </div>
-
-
   </div>
 
   <script src="//unpkg.com/alpinejs" defer></script>

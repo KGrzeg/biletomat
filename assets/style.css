@@ -242,13 +242,13 @@ h1 {
   padding: 0px 30px;
 }
 
-.dbl-column{
+.dbl-column {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.col{
+.dbl-column > *{
   flex: 1;
 }
 
@@ -257,6 +257,13 @@ h1 {
   height: auto;
   line-height: 95px;
 }
+
 .modal-body {
   padding: 5px 30px;
+}
+
+.single-column {
+  width: 612px;
+  margin: auto;
+  margin-top: 80px;
 }
