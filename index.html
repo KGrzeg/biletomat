@@ -24,6 +24,8 @@
       </div>
       <div class="button disabled" id="cancel" onclick="ticketMachine.cancel()" x-text="t(cancelBtn)">
         ANULUJ
+        <span onclick="modal.open('gdynia')">Gdynia</span>
+        <span onclick="modal.open('metro')">Metro</span>
       </div>
       <div class="info">
         <img src="/assets/info.png" />
@@ -41,24 +43,32 @@
           <div class="button" onclick="modal.close()">ZAMKNIJ</div>
         </div>
         <div class="modal-body">
-          <div class="dbl-column" id="modalview-dbl-column">
+          <div class="dbl-column" id="modalview-dbl-column"  style="display:none">
             <div>
               <h1>NORMALNY</h1>
-              <div id="buttons-column-1">
-                <div class="button">ZAMKNIJ</div>
+              <div id="buttons-column-1" >
+                <div class="button leftbutton" onclick="modal.click(0)">ZAMKNIJ</div>
+                <div class="button leftbutton" onclick="modal.click(1)">ZAMKNIJ</div>
+                <div class="button leftbutton" onclick="modal.click(2)">ZAMKNIJ</div>
+                <div class="button leftbutton" onclick="modal.click(3)">ZAMKNIJ</div>
               </div>
             </div>
             <div>
               <h1>ULGOWY</h1>
               <div id="buttons-column-2">
-                <div class="button">ZAMKNIJ</div>
+                <div class="button rightbutton" onclick="modal.click(4)">ZAMKNIJ</div>
+                <div class="button rightbutton" onclick="modal.click(5)">ZAMKNIJ</div>
+                <div class="button rightbutton" onclick="modal.click(6)">ZAMKNIJ</div>
+                <div class="button rightbutton" onclick="modal.click(7)">ZAMKNIJ</div>
               </div>
             </div>
           </div>
 
-          <div class="single-column" id="modalview-single-column">
+          <div class="single-column" id="modalview-single-column"  style="display:none">
             <div id="buttons-single">
-              <div class="button">ZAMKNIJ</div>
+              <div class="button" onclick="modal.click(0)">ZAMKNIJ</div>
+              <div class="button" onclick="modal.click(1)">ZAMKNIJ</div>
+              <div class="button" onclick="modal.click(2)">ZAMKNIJ</div>
             </div>
           </div>
         </div>
