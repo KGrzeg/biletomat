@@ -35,14 +35,55 @@ const langs = {
     'ticket-hour': "GODZINNY",
     'ticket-daily': "DOBOWY",
     'ticket-reduced': "ULGOWY",
-    'ticket-normal' : "NORMALNY",
-    'monthCard' : "Doładowanie miesięczne karty miejskiej",
+    'ticket-normal': "NORMALNY",
+    'monthCard': "Doładowanie miesięczne karty miejskiej",
     '3monthCard': "Doładowanie 3-miesięczne karty miejskiej",
-    'yearCard' : "Doładowanie roczne karty miejskiej",
+    'yearCard': "Doładowanie roczne karty miejskiej",
     'thanks-1': "OCZEKIWANIE NA PŁATNOŚĆ",
     'thanks-2': "PRZETWARZANIE",
     'thanks-3': "POTWIERDZENIE PŁATNOŚCI",
-    'thanks-4': "TRANSAKCJA ZAKOŃCZONA"
+    'thanks-4': "TRANSAKCJA ZAKOŃCZONA",
+
+    ///////////////////////////
+
+    'normal': "NORMALNE",
+    'reduced': "ULGOWE",
+
+    //GDYNIA
+
+    'normal-ticket': "ZWYKŁY",
+    'hurried-ticket': "POSPIESZNY",
+    '24-hour-ticket': "CAŁODOBOWY",
+
+    // modal
+    'one-time-metro': "1-RAZOWE",
+    '24-hour-metro': "24-GODZINNY",
+    '72-hour-metro': "72-GODZINNY",
+    'month-ticket': "MIESIĘCZNY",
+
+    //modal next menu
+    'normal-night': "ZWYKŁE I NOCNE",
+    'normal-hurrried-night': "ZWYKŁE, POSPIESZNE I NOCNE",
+    'comunal': "KOMUNALNE",
+    'train-comunal-2-org': "KOLEJOWO-KOMUNALNE 2 ORG",
+    'train-comunal-all-org': "KOLEJOWO-KOMUNALNE WSZYSTKICH ORG",
+    '72-comunal': "KOMUNALNE",
+    '72-train-comunal': "KOLEJOWO-KOMUNALNE",
+
+    //season
+    'month': "MIESIĘCZNY",
+    'season': "SEMESTRALNY",
+    'named-normal': "IMIENNY NORMALNY",
+    'named-reduced': "IMIENNY ULGOWY",
+    'bearer': "NA OKAZICIELA",
+    '4-MONTH': "4-MIESIECZNY",
+    '5-MONTH': "5-MIESIĘCZNYB",
+    //strefy
+    'zone-1': "ZWYKŁE I NOCNE W GDYNI",
+    'zone-2': "ZWYKŁE, POSPIESZNE I NOCNE W GDYNI",
+    'zone-3': "ZWYKŁE, POSPIESZNE I NOCNE W SOPOCIE LUB RUMI LUB KOSAKOWIE LUB ŻUKOWIE LUB SZEMUDZIE LUB WEJHEROWIE",
+    'zone-4': "ZWYKŁE, POSPIESZNE I NOCNE W RUMI, REDZIE I MIESCIE WEJHEROWO LUB WEJHEROWIE I RUMI",
+    'zone-5': "ZWYKŁE, POSPIESZNE I NOCNE W OBREĘBIE SIECI KOMUNIKACYJNEJ",
   },
   en: {
     ticketCity: "CITY TICKET",
@@ -80,14 +121,56 @@ const langs = {
     'ticket-hour': "1-HOUR",
     'ticket-daily': "24-HOUR",
     'ticket-reduced': "REDUCED",
-    'ticket-normal' : "NORMAL",
+    'ticket-normal': "NORMAL",
     'monthCard': 'A month recharge of the card',
     '3monthCard': '3 months recharge of the card',
     'yearCard': 'Year recharge of the card',
     'thanks-1': "WAITING FOR PAYMENT",
     'thanks-2': "PROCESSING",
     'thanks-3': "PAYMENT ACCEPTED",
-    'thanks-4': "TRANSACTION SUCCESSFULL"
+    'thanks-4': "TRANSACTION SUCCESSFULL",
+
+
+    ///////////////////////////
+
+    'normal': "NORMAL",
+    'reduced': "REDUCED",
+
+    //GDYNIA
+
+    'normal-ticket': "NORMAL TICKET",
+    'hurried-ticket': "HURRIED TICKET",
+    '24-hour-ticket': "24-HOUR TICKET",
+
+    // modal
+    'one-time-metro': "ONE-TIME",
+    '24-hour-metro': "24-HOUR",
+    '72-hour-metro': "72-HOUR",
+    'month-ticket': "MONTH",
+
+    //modal next menu
+    'normal-night': "NORMAL & NIGHT",
+    'normal-hurrried-night': "NORMAL, HURRIED & NIGHT",
+    'comunal': "COMUNAL",
+    'train-comunal-2-org': "TRAIN-COMUNAL 2 ORG",
+    'train-comunal-all-org': "TRAIN-COMUNAL ALL ORG",
+    '72-comunal': "COMUNAL",
+    '72-train-comunal': "TRAIN-COMUNAL",
+
+    //season
+    'month': "MONTH TICKET",
+    'season': "SEASON TICKET",
+    'named-normal': "NAMED NORMAL",
+    'named-reduced': "NAMED REDUCED",
+    'bearer': "BEARER",
+    '4-MONTH': "4-MONTH",
+    '5-MONTH': "5-MONTH",
+    //strefy
+    'zone-1': "REGULAR AND NIGHT IN GDYNIA",
+    'zone-2': "REGULAR, HURRIED AND NIGHT IN GDYNIA",
+    'zone-3': "REGULAR, HURRIED AND NIGHT IN SOPOT OR RUMIA OR KOSAKOWO OR ŻUKOWO OR SZEMUD OR WEJHEROWO",
+    'zone-4': "REGULAR, HURRIED AND NIGHT IN RUMIA, REDA AND WEJHEROWO CITY OR WEJHEROWO AND RUMIA",
+    'zone-5': "REGULAR, HURRIED AND NIGHT FOR ALL LINES",
   },
   ukr: {
     ticketCity: "МІСЬКИЙ КВИТОК",

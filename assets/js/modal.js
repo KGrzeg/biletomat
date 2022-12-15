@@ -1,58 +1,76 @@
 const modal = {
   views: {
-    gdynia: {
-      template: "modalview-dbl-column",
-      display: "flex",
-      leftColumButtons: [
-        { label: "1 Razowe", redirect: "xxx" },
-        { label: "24-Godzinne", redirect: "xxx" },
-        { label: "72-GODZINNE" },
-      ],
-      rightColumButtons: [
-        { label: "1 Razowe" },
-        { label: "24-Godzinne" },
-        { label: "72-GODZINNE" },
-      ],
-    },
     metro: {
       template: "modalview-dbl-column",
       display: "flex",
       //normalne:
       leftColumButtons: [
-        { label: "1 Razowe", redirect: "normalne-1-razowe" },
-        { label: "24-Godzinne", redirect: "normalne-24-godzinne" },
-        { label: "72-GODZINNE" },
-        { label: "MIESIĘCZNY" },
+        { label: "1 Razowe", redirect: "one-time-metro-normal" },
+        { label: "24-Godzinne", redirect: "24-hour-metro-normal" },
+        { label: "72-GODZINNE", redirect: "72-hour-metro-normal" },
+        { label: "MIESIĘCZNY", ticket: "normal/month/normal" },
       ],
       //ulgowe:
       rightColumButtons: [
-        { label: "1 Razowe", redirect: "ulgowe-1-razowe" },
-        { label: "24-Godzinne" },
-        { label: "72-GODZINNE" },
-        { label: "MIESIĘCZNY" },
+        { label: "1 Razowe", redirect: "one-time-metro-reduced" },
+        { label: "24-Godzinne", redirect: "24-hour-metro-reduced" },
+        { label: "72-GODZINNE", redirect: "72-hour-metro-reduced" },
+        { label: "MIESIĘCZNY", ticket: "reduced/month/normal" },
       ],
     },
-    "normalne-1-razowe": {
+
+    //część czerwona, bilety normalne
+    "one-time-metro-normal": {
       template: "modalview-single-column",
       display: "block",
       buttons: [
-        { label: "ZWYKŁE I NOCNE", redirect: "metro" },
-        { label: "ZWYKŁE, POSPIESZNE I NOCNE" }
+        { label: "ZWYKŁE I NOCNE", ticket: "normal/single/normal" },
+        { label: "ZWYKŁE, POSPIESZNE I NOCNE", ticket: "normal/single/night" }
       ],
     },
-    "normalne-24-godzinne": {
+    "24-hour-metro-normal": {
       template: "modalview-single-column",
       display: "block",
       buttons: [
-        { label: "KOMUNALNE" },
-        { label: "KOLEJOWO-KOMUNALNE 2 ORG" },
-        { label: "KOLEJOWO KOMUNALNE WSZYSTKICH ORG" },
+        { label: "KOMUNALNE", ticket: "normal/24/comunal" },
+        { label: "KOLEJOWO-KOMUNALNE 2 ORG", ticket: "normal/24/2-org" },
+        { label: "KOLEJOWO KOMUNALNE WSZYSTKICH ORG", ticket: "normal/24/all-org" },
       ],
     },
-    "ulgowe-1-razowe": {
+    "72-hour-metro-normal": {
       template: "modalview-single-column",
       display: "block",
-      buttons: [{ label: "ZWYKŁE I NOCNE" }, { label: "ZWYKŁE, POSPIESZNE I NOCNE" }],
+      buttons: [
+        { label: "KOMUNALNE", ticket: "normal/72/comunal" },
+        { label: "KOLEJOWO-KOMUNALNE", ticket: "normal/72/comunal-train" },
+      ],
+    },
+
+    //część zielona, bilety ulgowe
+    "one-time-metro-reduced": {
+      template: "modalview-single-column",
+      display: "block",
+      buttons: [
+        { label: "ZWYKŁE I NOCNE", ticket: "reduced/single/normal" },
+        { label: "ZWYKŁE, POSPIESZNE I NOCNE", ticket: "reduced/single/night" }
+      ],
+    },
+    "24-hour-metro-reduced": {
+      template: "modalview-single-column",
+      display: "block",
+      buttons: [
+        { label: "KOMUNALNE", ticket: "reduced/24/comunal" },
+        { label: "KOLEJOWO-KOMUNALNE 2 ORG", ticket: "reduced/24/2-org" },
+        { label: "KOLEJOWO KOMUNALNE WSZYSTKICH ORG", ticket: "reduced/24/all-org" },
+      ],
+    },
+    "72-hour-metro-reduced": {
+      template: "modalview-single-column",
+      display: "block",
+      buttons: [
+        { label: "KOMUNALNE", ticket: "reduced/72/comunal" },
+        { label: "KOLEJOWO-KOMUNALNE", ticket: "reduced/72/comunal-train" },
+      ],
     },
   },
   obecnywidok: "",
@@ -113,16 +131,28 @@ const modal = {
     if (template == "modalview-dbl-column") {
       let button
 
-      if (whichbutton < 4) {
-        button = modal.views[modal.obecnywidok].leftColumButtons[whichbutton]
-      } else {
-        button = modal.views[modal.obecnywidok].rightColumButtons[whichbutton - 4]
-      }
+      if (whichbutton < 4)
+        button = modal.views[modal.obecnywidok]
+          .leftColumButtons[whichbutton]
+      else
+        button = modal.views[modal.obecnywidok]
+          .rightColumButtons[whichbutton - 4]
 
-      modal.open(button.redirect)
+      if (button.redirect) {
+        modal.open(button.redirect)
+      } else {
+        metroTicketMachine.add(button.ticket);
+        modal.close()
+      }
     } else {
       button = modal.views[modal.obecnywidok].buttons[whichbutton]
-      modal.open(button.redirect)
+
+      if (button.redirect) {
+        modal.open(button.redirect)
+      } else {
+        metroTicketMachine.add(button.ticket);
+        modal.close()
+      }
     }
   },
 };
