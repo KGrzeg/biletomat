@@ -1,0 +1,312 @@
+<div class="content">
+  <div class="button small" onclick="modal.open('metro')">DODAJ BILET</div>
+  <div class="grid metro">
+    <h2 id="normal/single/night-header">
+      <span x-text="t('ticket-normal')"></span>
+      <span x-text="t('one-time-metro')"></span>
+      <span x-text="t('normal-night')"></span>
+    </h2>
+    <div class="selector" id="normal/single/night-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('normal/single/night')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('normal/single/night')">
+          +
+        </div>
+        <div class="button counter" id="normal/single/night-counter">
+          0
+        </div>
+      </div>
+    </div>
+    <h2 id="normal/month/normal-header">
+      <span x-text="t('ticket-normal')"></span>
+      <span x-text="t('month-ticket')"></span>
+    </h2>
+    <div class="selector" id="normal/month/normal-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('normal/month/normal')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('normal/month/normal')">
+          +
+        </div>
+        <div class="button counter" id="normal/month/normal-counter">
+          0
+        </div>
+      </div>
+    </div>
+    <h2 id="normal/single/normal-header">
+      <span x-text="t('ticket-normal')"></span>
+      <span x-text="t('one-time-metro')"></span>
+    </h2>
+    <div class="selector" id="normal/single/normal-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('normal/single/normal')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('normal/single/normal')">
+          +
+        </div>
+        <div class="button counter" id="normal/single/normal-counter">
+          0
+        </div>
+      </div>
+    </div>
+    <h2 id="normal/24/comunal-header">
+      <span x-text="t('ticket-normal')"></span>
+      <span x-text="t('24-hour-metro')"></span>
+      <span x-text="t('comunal')"></span>
+    </h2>
+    <div class="selector" id="normal/24/comunal-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('normal/24/comunal')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('normal/24/comunal')">
+          +
+        </div>
+        <div class="button counter" id="normal/24/comunal-counter">
+          0
+        </div>
+      </div>
+    </div>
+    <h2 id="normal/24/2-org-header">
+      <span x-text="t('ticket-normal')"></span>
+      <span x-text="t('24-hour-metro')"></span>
+      <span x-text="t('train-comunal-2-org')"></span>
+    </h2>
+    <div class="selector" id="normal/24/2-org-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('normal/24/2-org')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('normal/24/2-org')">
+          +
+        </div>
+        <div class="button counter" id="normal/24/2-org-counter">
+          0
+        </div>
+      </div>
+    </div>
+    <h2 id="normal/24/all-org-header">
+      <span x-text="t('ticket-normal')"></span>
+      <span x-text="t('24-hour-metro')"></span>
+      <span x-text="t('train-comunal-all-org')"></span>
+    </h2>
+    <div class="selector" id="normal/24/all-org-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('normal/24/all-org')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('normal/24/all-org')">
+          +
+        </div>
+        <div class="button counter" id="normal/24/all-org-counter">
+          0
+        </div>
+      </div>
+    </div>
+    <h2 id="normal/72/comunal-header">
+      <span x-text="t('ticket-normal')"></span>
+      <span x-text="t('72-hour-metro')"></span>
+      <span x-text="t('comunal')"></span>
+    </h2>
+    <div class="selector" id="normal/72/comunal-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('normal/72/comunal')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('normal/72/comunal')">
+          +
+        </div>
+        <div class="button counter" id="normal/72/comunal-counter">
+          0
+        </div>
+      </div>
+    </div>
+    <h2 id="normal/72/comunal-train-header">
+      <span x-text="t('ticket-normal')"></span>
+      <span x-text="t('72-hour-metro')"></span>
+      <span x-text="t('72-train-comunal')"></span>
+    </h2>
+    <div class="selector" id="normal/72/comunal-train-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('normal/72/comunal-train')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('normal/72/comunal-train')">
+          +
+        </div>
+        <div class="button counter" id="normal/72/comunal-train-counter">
+          0
+        </div>
+      </div>
+    </div>
+
+    <!-- ULGOWE -->
+    <h2 id="reduced/single/night-header">
+      <span x-text="t('ticket-reduced')"></span>
+      <span x-text="t('month-ticket')"></span>
+    </h2>
+    <div class="selector" id="reduced/single/night-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('reduced/single/night')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('reduced/single/night')">
+          +
+        </div>
+        <div class="button counter" id="reduced/single/night-counter">
+          0
+        </div>
+      </div>
+    </div>
+    <h2 id="reduced/month/normal-header">
+      <span x-text="t('ticket-reduced')"></span>
+      <span x-text="t('month-ticket')"></span>
+    </h2>
+    <div class="selector" id="reduced/month/normal-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('reduced/month/normal')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('reduced/month/normal')">
+          +
+        </div>
+        <div class="button counter" id="reduced/month/normal-counter">
+          0
+        </div>
+      </div>
+    </div>
+    <h2 id="reduced/single/normal-header">
+      <span x-text="t('ticket-reduced')"></span>
+      <span x-text="t('one-time-metro')"></span>
+    </h2>
+    <div class="selector" id="reduced/single/normal-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('reduced/single/normal')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('reduced/single/normal')">
+          +
+        </div>
+        <div class="button counter" id="reduced/single/normal-counter">
+          0
+        </div>
+      </div>
+    </div>
+
+    <h2 id="reduced/24/comunal-header">
+      <span x-text="t('ticket-reduced')"></span>
+      <span x-text="t('24-hour-metro')"></span>
+      <span x-text="t('comunal')"></span>
+    </h2>
+    <div class="selector" id="reduced/24/comunal-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('reduced/24/comunal')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('reduced/24/comunal')">
+          +
+        </div>
+        <div class="button counter" id="reduced/24/comunal-counter">
+          0
+        </div>
+      </div>
+    </div>
+
+    <h2 id="reduced/24/2-org-header">
+      <span x-text="t('ticket-reduced')"></span>
+      <span x-text="t('24-hour-metro')"></span>
+      <span x-text="t('train-comunal-2-org')"></span>
+    </h2>
+    <div class="selector" id="reduced/24/2-org-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('reduced/24/2-org')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('reduced/24/2-org')">
+          +
+        </div>
+        <div class="button counter" id="reduced/24/2-org-counter">
+          0
+        </div>
+      </div>
+    </div>
+
+    <h2 id="reduced/24/all-org-header">
+      <span x-text="t('ticket-reduced')"></span>
+      <span x-text="t('24-hour-metro')"></span>
+      <span x-text="t('train-comunal-all-org')"></span>
+    </h2>
+    <div class="selector" id="reduced/24/all-org-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('reduced/24/all-org')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('reduced/24/all-org')">
+          +
+        </div>
+        <div class="button counter" id="reduced/24/all-org-counter">
+          0
+        </div>
+      </div>
+    </div>
+
+    <h2 id="reduced/72/comunal-header">
+      <span x-text="t('ticket-reduced')"></span>
+      <span x-text="t('72-hour-metro')"></span>
+      <span x-text="t('comunal')"></span>
+    </h2>
+    <div class="selector" id="reduced/72/comunal-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('reduced/72/comunal')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('reduced/72/comunal')">
+          +
+        </div>
+        <div class="button counter" id="reduced/72/comunal-counter">
+          0
+        </div>
+      </div>
+    </div>
+    <h2 id="reduced/72/comunal-train-header">
+      <span x-text="t('ticket-reduced')"></span>
+      <span x-text="t('72-hour-metro')"></span>
+      <span x-text="t('72-train-comunal')"></span>
+    </h2>
+    <div class="selector" id="reduced/72/comunal-train-selector">
+      <div class="buttonRow">
+        <div class="button" onclick="metroTicketMachine.substract('reduced/72/comunal-train')">
+          -
+        </div>
+        <div class="button" onclick="metroTicketMachine.add('reduced/72/comunal-train')">
+          +
+        </div>
+        <div class="button counter" id="reduced/72/comunal-train-counter">
+          0
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="horizontalFlex summaryFlex">
+    <div>
+      <p class="sum">
+        <span x-text="t('sum')">KWOTA:</span>
+        <br />
+        <span id="sum">0 ZŁ</span>
+      </p>
+    </div>
+    <div>
+      <pre id="summary" class="summary"></pre>
+    </div>
+    <div class="button" onclick="router.redirect('platnosc.html').then(function() {ticketMachine.updateView()})"
+      x-text="t('proceed')"></div>
+  </div>
+</div>

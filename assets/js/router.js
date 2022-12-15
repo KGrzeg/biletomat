@@ -46,7 +46,12 @@ const router = {
     router
       .redirect(router.currentHref)
       .then(function () {
-        ticketMachine.updateView();
+        try {
+          ticketMachine.updateView();
+        } catch (error) { }
+        try {
+          metroTicketMachine.updateView();
+        } catch (error) { }
       });
   }
 }

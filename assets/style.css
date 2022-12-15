@@ -1,6 +1,28 @@
+
 * {
   box-sizing: border-box;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 40px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: 2px solid white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
+}
+
 
 body {
   margin: 0;
@@ -266,4 +288,26 @@ h1 {
   width: 612px;
   margin: auto;
   margin-top: 80px;
+}
+
+.grid.metro{
+  height: 240px;
+  width: 97%;
+  grid-template-columns: auto 510px;
+  overflow: auto;
+  border: 2px solid white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.grid.metro .selector {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.grid.metro h2 {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 20px;
 }
