@@ -26,7 +26,7 @@ const modal = {
       ],
       //ulgowe:
       rightColumButtons: [
-        { label: "1 Razowe" },
+        { label: "1 Razowe", redirect: "ulgowe-1-razowe" },
         { label: "24-Godzinne" },
         { label: "72-GODZINNE" },
         { label: "MIESIĘCZNY" },
@@ -35,7 +35,10 @@ const modal = {
     "normalne-1-razowe": {
       template: "modalview-single-column",
       display: "block",
-      buttons: [{ label: "ZWYKŁE I NOCNE" }, { label: "ZWYKŁE, POSPIESZNE I NOCNE" }],
+      buttons: [
+        { label: "ZWYKŁE I NOCNE", redirect: "metro" },
+        { label: "ZWYKŁE, POSPIESZNE I NOCNE" }
+      ],
     },
     "normalne-24-godzinne": {
       template: "modalview-single-column",
@@ -45,6 +48,11 @@ const modal = {
         { label: "KOLEJOWO-KOMUNALNE 2 ORG" },
         { label: "KOLEJOWO KOMUNALNE WSZYSTKICH ORG" },
       ],
+    },
+    "ulgowe-1-razowe": {
+      template: "modalview-single-column",
+      display: "block",
+      buttons: [{ label: "ZWYKŁE I NOCNE" }, { label: "ZWYKŁE, POSPIESZNE I NOCNE" }],
     },
   },
   obecnywidok: "",
@@ -100,23 +108,21 @@ const modal = {
     document.getElementById("modalview-dbl-column").style.display = "none";
   },
   click(whichbutton) {
-    switch (modal.obecnywidok) {
-      case "metro": {
-        const button = modal.views.metro.leftColumButtons[whichbutton]
-        console.log(button)
-        modal.open(button.redirect)
-        break
+    const template = modal.views[modal.obecnywidok].template
+
+    if (template == "modalview-dbl-column") {
+      let button
+
+      if (whichbutton < 4) {
+        button = modal.views[modal.obecnywidok].leftColumButtons[whichbutton]
+      } else {
+        button = modal.views[modal.obecnywidok].rightColumButtons[whichbutton - 4]
       }
-      case "normalne-1-razowe": {
-        switch (whichbutton) {
-          case 0: {
-            // kliknięto guzik 0, przejdź do kolejnego widoku
-          }
-          case 1: {
-            // kliknięto guzik 1, przejdź do kolejnego widoku
-          }
-        }
-      }
+
+      modal.open(button.redirect)
+    } else {
+      button = modal.views[modal.obecnywidok].buttons[whichbutton]
+      modal.open(button.redirect)
     }
   },
 };
