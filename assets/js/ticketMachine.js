@@ -4,16 +4,16 @@ const ticketMachine = {
   prices: {
     city: {
       single: {
-        reduced: 1,
-        normal: 2,
+        reduced: 1.9,
+        normal: 3.8,
       },
       hour: {
-        reduced: 2,
-        normal: 4,
+        reduced: 2.2,
+        normal: 4.4,
       },
       daily: {
-        reduced: 5,
-        normal: 10,
+        reduced: 7,
+        normal: 14,
       },
     },
     metro: {

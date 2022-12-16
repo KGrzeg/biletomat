@@ -31,7 +31,7 @@ const langs = {
     'metro-hour-normal': "Metropolialny godzinny normalny",
     'metro-daily-reduced': "Metropolialny całodobowy ulgowy",
     'metro-daily-normal': "Metropolialny całodobowy normalny",
-    'ticket-single': "JEDNORAZOWY",
+    'ticket-single': "JEDNOPRZEJAZDOWY",
     'ticket-hour': "GODZINNY",
     'ticket-daily': "DOBOWY",
     'ticket-reduced': "ULGOWY",
@@ -42,7 +42,9 @@ const langs = {
     'thanks-1': "OCZEKIWANIE NA PŁATNOŚĆ",
     'thanks-2': "PRZETWARZANIE",
     'thanks-3': "POTWIERDZENIE PŁATNOŚCI",
-    'thanks-4': "TRANSAKCJA ZAKOŃCZONA",
+    'thanks-4': "DRUKOWANIE BILETU",
+    'thanks-5': "PROSZĘ ODEBRAĆ BILET",
+    'thanks-6': "TRANSAKCJA ZAKOŃCZONA",
 
     ///////////////////////////
 
