@@ -72,6 +72,11 @@ const modal = {
         { label: "KOLEJOWO-KOMUNALNE", ticket: "reduced/72/comunal-train" },
       ],
     },
+    "info": {
+      template: "modalview-info",
+      display: "block",
+      button: []
+    }
   },
   obecnywidok: "",
 
@@ -124,6 +129,7 @@ const modal = {
     document.getElementById("modal-wrapper").style.display = "none";
     document.getElementById("modalview-single-column").style.display = "none";
     document.getElementById("modalview-dbl-column").style.display = "none";
+    document.getElementById("modalview-info").style.display = "none";
   },
   click(whichbutton) {
     const template = modal.views[modal.obecnywidok].template

@@ -26,7 +26,7 @@
         ANULUJ
       </div>
       <div class="info">
-        <img src="/assets/info.png" />
+        <img src="/assets/info.png" onclick="modal.open('info')" />
         <img src="/assets/poland.png" id="pl" class="flag" onclick="langs.changeLang('pl')" style="display: none" />
         <img src="/assets/us.png" id="en" class="flag" onclick="langs.changeLang('en')" />
         <img src="/assets/ukraine.png" id="ukr" class="flag" onclick="langs.changeLang('ukr')" />
@@ -41,10 +41,10 @@
           <div class="button" onclick="modal.close()">ZAMKNIJ</div>
         </div>
         <div class="modal-body">
-          <div class="dbl-column" id="modalview-dbl-column"  style="display:none">
+          <div class="dbl-column" id="modalview-dbl-column" style="display:none">
             <div>
               <h1>NORMALNY</h1>
-              <div id="buttons-column-1" >
+              <div id="buttons-column-1">
                 <div class="button leftbutton" onclick="modal.click(0)">ZAMKNIJ</div>
                 <div class="button leftbutton" onclick="modal.click(1)">ZAMKNIJ</div>
                 <div class="button leftbutton" onclick="modal.click(2)">ZAMKNIJ</div>
@@ -62,12 +62,21 @@
             </div>
           </div>
 
-          <div class="single-column" id="modalview-single-column"  style="display:none">
+          <div class="single-column" id="modalview-single-column" style="display:none">
             <div id="buttons-single">
               <div class="button" onclick="modal.click(0)">ZAMKNIJ</div>
               <div class="button" onclick="modal.click(1)">ZAMKNIJ</div>
               <div class="button" onclick="modal.click(2)">ZAMKNIJ</div>
             </div>
+          </div>
+
+          <div class="info" id="modalview-info" style="display:none">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quaerat. Corrupti voluptatem
+              debitis alias pariatur reiciendis incidunt aliquid molestias! Eius qui modi culpa necessitatibus pariatur
+              eligendi non ad quaerat voluptatum!</p>
+            <p>Minima, provident, nulla asperiores quibusdam cum ducimus officia eaque eveniet saepe magnam, cupiditate
+              debitis. Eos eum recusandae iure et nulla libero? Dicta rerum, dolorem porro tempora non vitae molestiae
+              iste!</p>
           </div>
         </div>
       </div>
