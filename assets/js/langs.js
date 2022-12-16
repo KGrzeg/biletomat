@@ -46,10 +46,13 @@ const langs = {
     'thanks-5': "PROSZĘ ODEBRAĆ BILET",
     'thanks-6': "TRANSAKCJA ZAKOŃCZONA",
 
+    'extend-card': "PRZEDŁUŻENIE KARTY MIEJSKIEJ",
+
     ///////////////////////////
 
     'normal': "NORMALNE",
     'reduced': "ULGOWE",
+    'time-based': "OKRESOWE",
 
     //GDYNIA
 
@@ -58,7 +61,7 @@ const langs = {
     '24-hour-ticket': "CAŁODOBOWY",
 
     // modal
-    'one-time-metro': "1-RAZOWE",
+    'one-time-metro': "JEDNOPRZEJAZDOWY",
     '24-hour-metro': "24-GODZINNY",
     '72-hour-metro': "72-GODZINNY",
     'month-ticket': "MIESIĘCZNY",

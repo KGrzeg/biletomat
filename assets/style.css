@@ -311,3 +311,20 @@ h1 {
   margin-right: auto;
   padding-left: 20px;
 }
+
+.zones .button{
+  width: 540px;
+}
+
+.zones .dbl-column {
+  width: 90%;
+  text-align: center
+}
+
+.zones.smaller .button {
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+  font-size: 35px;
+  height: 200px;
+}

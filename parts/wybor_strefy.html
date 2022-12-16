@@ -1,0 +1,43 @@
+<div class="content zones smaller">
+  <div class="dbl-column">
+    <div>
+      <div class="button small" onclick="
+      router.redirect('platnosc.html').then(function(){
+        const discount = router.payload.discount;
+        document.getElementById('sum').innerText = (132 * discount) + ' ZŁ';
+        document.getElementById('summary').innerText = t('zone-1');
+      })" x-text="t('zone-1')">
+      </div>
+      <div class="button small" onclick="
+      router.redirect('platnosc.html').then(function(){
+        const discount = router.payload.discount;
+        document.getElementById('sum').innerText = (172 * discount) + ' ZŁ';
+        document.getElementById('summary').innerText = t('zone-2');
+      })" x-text="t('zone-2')">
+      </div>
+      <div class="button small" onclick="
+      router.redirect('platnosc.html').then(function(){
+        const discount = router.payload.discount;
+        document.getElementById('sum').innerText = (167 * discount) + ' ZŁ';
+        document.getElementById('summary').innerText = t('zone-3');
+      })" x-text="t('zone-3')">
+      </div>
+    </div>
+    <div>
+      <div class="button small" onclick="
+      router.redirect('platnosc.html').then(function(){
+        const discount = router.payload.discount;
+        document.getElementById('sum').innerText = (194 * discount) + ' ZŁ';
+        document.getElementById('summary').innerText = t('zone-4');
+      })" x-text="t('zone-4')">
+      </div>
+      <div class="button small" onclick="
+      router.redirect('platnosc.html').then(function(){
+        const discount = router.payload.discount;
+        document.getElementById('sum').innerText = (89 * discount) + ' ZŁ';
+        document.getElementById('summary').innerText = t('zone-5');
+      })" x-text="t('zone-5')">
+      </div>
+    </div>
+  </div>
+</div>

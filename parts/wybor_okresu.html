@@ -1,0 +1,20 @@
+<div class="content zones">
+  <div class="dbl-column">
+    <div>
+      <h1 x-text="t('month')">MIESIĘCZNY</h1>
+      <div>
+        <div class="button small leftbutton" x-text="t('named-normal')" onclick="router.redirect('wybor_strefy.html', {discount: 1.0})"></div>
+        <div class="button small leftbutton" x-text="t('named-reduced')" onclick="router.redirect('wybor_strefy.html', {discount: 0.63})"></div>
+        <div class="button small leftbutton" x-text="t('bearer')" onclick="router.redirect('wybor_strefy.html', {discount: 1.4})"></div>
+      </div>
+    </div>
+    <div>
+      <h1 x-text="t('season')">SEMESTRALNY</h1>
+      <div>
+        <div class="button small rightbutton" x-text="t('4-MONTH')" onclick="router.redirect('wybor_strefy.html', {discount: 4.3})"></div>
+        <div class="button small rightbutton" x-text="t('5-MONTH')" onclick="router.redirect('wybor_strefy.html', {discount: 4.4})"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -5,15 +5,15 @@ const modal = {
       display: "flex",
       //normalne:
       leftColumButtons: [
-        { label: "1 Razowe", redirect: "one-time-metro-normal" },
-        { label: "24-Godzinne", redirect: "24-hour-metro-normal" },
+        { label: "1 PRZEJAZDOWY", redirect: "one-time-metro-normal" },
+        { label: "24-GODZINNE", redirect: "24-hour-metro-normal" },
         { label: "72-GODZINNE", redirect: "72-hour-metro-normal" },
         { label: "MIESIĘCZNY", ticket: "normal/month/normal" },
       ],
       //ulgowe:
       rightColumButtons: [
-        { label: "1 Razowe", redirect: "one-time-metro-reduced" },
-        { label: "24-Godzinne", redirect: "24-hour-metro-reduced" },
+        { label: "1 PRZEJAZDOWY", redirect: "one-time-metro-reduced" },
+        { label: "24-GODZINNE", redirect: "24-hour-metro-reduced" },
         { label: "72-GODZINNE", redirect: "72-hour-metro-reduced" },
         { label: "MIESIĘCZNY", ticket: "reduced/month/normal" },
       ],

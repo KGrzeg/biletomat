@@ -1,0 +1,11 @@
+<div class="content push">
+  <div class="button small"
+    onclick="
+      router.redirect('wybor_okresu.html').then(function(){ticketMachine.updateView()})"
+    x-text="t('time-based')">
+  </div>
+  <div class="button small"
+    onclick="router.redirect('karta_miejska.html').then(function(){ ticketMachine.updateView() })"
+    x-text="t('extend-card')">
+  </div>
+</div>

@@ -23,6 +23,7 @@ const router = {
         const body = document.getElementById("body");
         body.innerHTML = text;
         router.currentHref = href;
+        console.log(href);
 
         if (router.hideBackBtnOnHrefs.indexOf(href) !== -1)
           document.getElementById("back").classList.add('disabled');
